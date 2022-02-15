@@ -36,6 +36,10 @@ class SiswaController extends Controller
         return view('siswa.pendaftaran.register');
     }
 
+    public static function upload_dokumen(){        
+        return view('siswa.pendaftaran.upload_dokumen');
+    }
+
     public static function pembayaran(){        
         return view('siswa.dokumen.pembayaran');
     }

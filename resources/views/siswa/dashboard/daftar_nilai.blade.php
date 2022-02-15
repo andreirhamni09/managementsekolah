@@ -272,21 +272,21 @@
     <script src="{{ asset('public/js/demo.js') }}"></script>
     <!-- page script -->
     <script>
-    $(function () {
-        $("#example1").DataTable({
-        "responsive": true,
-        "autoWidth": false,
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+            $('#example2').DataTable({
+                "paging": false,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
         });
-        $('#example2').DataTable({
-            "paging": false,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-        });
-    });
     </script>
 </body>
 

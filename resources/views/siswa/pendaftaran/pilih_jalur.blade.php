@@ -36,7 +36,7 @@
 
 <body class="hold-transition login-page">
   <div class="login-box" style="width:40%;">
-    <div class="login-logo" style="margin-bottom:-25px;position: relative; z-index: 9999;">
+    <div class="login-logo" style="margin-bottom:-25px;position: relative; z-index: 10;">
       <img src="{{ asset('public/img/Logo GEC.png') }}" class="rounded" style="width:40%;">
     </div>
     <!-- /.login-logo -->
@@ -45,9 +45,9 @@
         <h3 class="mt-4 mx-auto">JALUR</h3>
       </div>
       <div class="card-body login-card-body" style="background-color:#06B8FF;color:white;">
-
         <form action="" method="post">
           <div class="row">
+            <!-- JALUR MANDIRI -->
             <div class="col-md-4">
               <div class="form-group">
                 <div class="row">
@@ -58,49 +58,57 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group jalur" style="text-align: center;">
-                      <span><i class="fas fa-user-alt fa-3x"></i>
+                      <span><i class="fas fa-user-circle fa-3x" style="color: black;"></i>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-check" style="text-align: center;">
-                      <input class="form-check-input" type="radio" name="prestasi_a">
-                      <label class="form-check-label">Akademik<abbr class="pl-2" title="Mantap"><i class="fas fa-question-circle"></i></abbr></label>
-                    </div>
-                    <div class="form-check" style="text-align: center;">
-                      <input class="form-check-input" type="radio" name="prestasi_a">
-                      <label class="form-check-label">Nonakademik<abbr class="pl-2" title="Mantap"><i class="fas fa-question-circle"></i></abbr></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="form-group" style="text-align: center;">
-                      <label>Mandiri</label>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group" style="text-align: center;">
-                      <i class="fas fa-user-alt fa-3x"></i>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-check" style="text-align: center;">
-                      <input class="form-check-input" type="radio" name="prestasi_a">
-                      <label class="form-check-label">Akademik<abbr class="pl-2" title="Mantap"><i class="fas fa-question-circle"></i></abbr></label>
-                    </div>
-                    <div class="form-check" style="text-align: center;">
-                      <input class="form-check-input" type="radio" name="prestasi_a">
-                      <label class="form-check-label">Nonakademik<abbr class="pl-2" title="Mantap"><i class="fas fa-question-circle"></i></abbr></label>
+                      <input class="form-check-input" type="radio" name="jalur">
+                      <label class="form-check-label">
+                        Mandiri
+                        <i class="fas fa-question-circle" style="color:black;" data-toggle="modal" data-target="#modal-jalur-mandiri"></i>
+                      </label>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- Jalur Prestasi A -->
+            <div class="col-md-4">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group" style="text-align: center;">
+                      <label>Prestasi A</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group" style="text-align: center;">
+                      <i class="fas fa-medal fa-3x" style="color: black;"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-check" style="text-align: center;">
+                      <input class="form-check-input" type="radio" name="jalur">
+                      <label class="form-check-label">
+                        Akademik
+                        <i class="fas fa-question-circle" style="color:black;" data-toggle="modal" data-target="#modal-jalur-prestasi-a-akademik"></i>
+                      </label>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                      <input class="form-check-input" type="radio" name="jalur">
+                      <label class="form-check-label">
+                        Nonakademik
+                        <i class="fas fa-question-circle" style="color:black;" data-toggle="modal" data-target="#modal-jalur-prestasi-a-non-akademik"></i>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Jalur Prestasi B -->
             <div class="col-md-4">
               <div class="form-group">
                 <div class="row">
@@ -109,17 +117,23 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group" style="text-align: center;">
-                      <i class="fas fa-user-alt fa-3x"></i>
+                      <i class="fas fa-medal fa-3x" style="color: black;"></i>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-check" style="text-align: center;">
-                      <input class="form-check-input" type="radio" name="prestasi_b">
-                      <label class="form-check-label">Akademik<abbr class="pl-2" title="Mantap"><i class="fas fa-question-circle"></i></abbr></label>
+                      <input class="form-check-input" type="radio" name="jalur">
+                      <label class="form-check-label">
+                        Akademik
+                        <i class="fas fa-question-circle" style="color:black;" data-toggle="modal" data-target="#modal-jalur-prestasi-b-akademik"></i>
+                      </label>
                     </div>
                     <div class="form-check" style="text-align: center;">
-                      <input class="form-check-input" type="radio" name="prestasi_b">
-                      <label class="form-check-label">Nonakademik<abbr class="pl-2" title="Mantap"><i class="fas fa-question-circle"></i></abbr></label>
+                      <input class="form-check-input" type="radio" name="jalur">
+                      <label class="form-check-label">
+                        Nonakademik
+                        <i class="fas fa-question-circle" style="color:black;" data-toggle="modal" data-target="#modal-jalur-prestasi-b-non-akademik"></i>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -128,13 +142,209 @@
 
             <div class="col-12">
               <button type="submit" class="btn btn-block fluid mx-auto" style="background-color:#5656DE;color:white; width:80%;">
-                Daftar
+                Lanjut Pendaftaran
               </button>
             </div>
           </div>
         </form>
         <!-- /.social-auth-links -->
 
+      </div>
+
+      <!-- Modal Jalur Mandiri -->
+      <div class="modal fade" id="modal-jalur-mandiri">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Jalur Mandiri</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Gelombang</th>
+                    <th>Tanggal Pendaftaran</th>
+                    <th>Potongan Biaya Kuliah</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Gelombang 1</td>
+                    <td>12 Februari 2022 - 12 Maret 2021</td>
+                    <td>10% Total Biaya Pendaftaran</td>
+                  </tr>
+
+                  <tr>
+                    <td>Gelombang 2</td>
+                    <td>12 Februari 2022 - 12 Maret 2021</td>
+                    <td>5% Total Biaya Pendaftaran</td>
+                  </tr>
+
+                  <tr>
+                    <td>Gelombang 2</td>
+                    <td>12 Februari 2022 - 12 Maret 2021</td>
+                    <td>0% atau Tidak Ada Potongan</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.login-card-body -->
+
+      <!-- Modal Jalur Prestasi A Akademik -->
+      <div class="modal fade" id="modal-jalur-prestasi-a-akademik">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Prestasi A Akademik</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Syarat</th>
+                    <th>Keuntungan</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td><b>Rangking 1-5 dari Sekolah</b></td>
+                    <td rowspan="2" style="vertical-align: middle;">Kuliah Bebas SPP 50%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+
+      <!-- Modal Jalur Prestasi A Non-akademik -->
+      <div class="modal fade" id="modal-jalur-prestasi-a-non-akademik">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Prestasi A Non-akademik</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Syarat</th>
+                    <th>Keuntungan</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td><b>Juara Lomba Tingkat Nasional, Provisi, atau Kabupaten</b></td>
+                    <td rowspan="2" style="vertical-align: middle;">Kuliah Bebas SPP 50%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.login-card-body -->
+
+      <!-- Modal Jalur Prestasi B Akademik -->
+      <div class="modal fade" id="modal-jalur-prestasi-b-akademik">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Prestasi B Akademik</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Syarat</th>
+                    <th>Keuntungan</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td><b>Rangking 6-10 dari Sekolah</b></td>
+                    <td rowspan="2" style="vertical-align: middle;">Kuliah Bebas SPP 25%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+
+      <!-- Modal Jalur Prestasi B Non-akademik -->
+      <div class="modal fade" id="modal-jalur-prestasi-b-non-akademik">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Prestasi B Non-Akademik</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Syarat</th>
+                    <th>Keuntungan</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td><b>Juara Lomba Tingkat Kecamatan, Kelurahan, Desa, atau Sekolah</b></td>
+                    <td rowspan="2" style="vertical-align: middle;">Kuliah Bebas SPP 25%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
       </div>
       <!-- /.login-card-body -->
     </div>
@@ -147,6 +357,33 @@
   <script src="{{ asset('public/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <!-- AdminLTE App -->
   <script src="{{ asset('public/js/adminlte.min.js') }}"></script>
+
+  <!-- SweetAlert2 -->
+  <script src="{{ asset('public/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+  <!-- Toastr -->
+  <script src="{{ asset('public/plugins/toastr/toastr.min.js') }}"></script>
+  <!-- AdminLTE App -->
+  <script src="{{ asset('public/js/adminlte.min.js') }}"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="{{ asset('public/js/demo.js') }}"></script>
+
+  <script>
+    $(function() {
+      $("#example1").DataTable({
+        "responsive": true,
+        "autoWidth": false,
+      });
+      $('#example2').DataTable({
+        "paging": false,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
 
 </body>
 
